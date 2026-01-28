@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Jesmine Chaudhuri | Data Scientist</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Portfolio of Jesmine Chaudhuri – Data Scientist with 13+ years in backend engineering, ML, GenAI, and technical leadership." name="description"/>
+<style>
+    :root {
+      --bg: #020617;
+      --bg-alt: #020c1f;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: #1f2937;
+      --radius-lg: 1.5rem;
+      --radius-md: 1rem;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.8);
+      --shadow-subtle: 0 10px 30px rgba(15, 23, 42, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0, #020617 50%, #000 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 3rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(2, 6, 23, 0.96), rgba(2, 6, 23, 0.92));
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.9rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .brand-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #f97316, #ec4899 40%, #38bdf8 100%);
+      box-shadow: 0 0 0 2px rgba(148, 163, 184, 0.15), 0 10px 25px rgba(15, 23, 42, 0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-logo::after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border-radius: inherit;
+      border: 2px solid rgba(15, 23, 42, 0.85);
+    }
+
+    .brand-text-main {
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+    }
+
+    .brand-text-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      transition: all 160ms ease-out;
+    }
+
+    nav a:hover {
+      color: #f9fafb;
+      border-color: rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      color: var(--text-muted);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), rgba(15, 23, 42, 0.9));
+    }
+
+    .nav-cta a.cta-link {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 2.5rem;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 3vw + 1.4rem, 3.2rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(to right, #f97316, #ec4899, #38bdf8);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 32rem;
+      margin-bottom: 1.35rem;
+    }
+
+    .hero-subtitle strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .hero-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.84rem;
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 999px;
+      padding: 0.35rem 0.8rem 0.35rem 0.35rem;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      margin-bottom: 1.35rem;
+    }
+
+    .hero-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.25);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    .hero-meta span {
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.92);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.4rem;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 0.72rem 1.3rem;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid transparent;
+      background: transparent;
+      cursor: pointer;
+      transition: all 150ms ease-out;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(to right, #0ea5e9, #6366f1);
+      color: #f9fafb;
+      border-color: rgba(15, 23, 42, 0.9);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      border-color: rgba(148, 163, 184, 0.6);
+      color: var(--text-main);
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: var(--accent);
+    }
+
+    .btn span.icon {
+      font-size: 1.1rem;
+    }
+
+    .hero-right {
+      align-self: center;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      background: radial-gradient(circle at top left, #0b1220, #020617);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -80px;
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.16), transparent 60%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 999px;
+      border: 2px solid rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at 30% 20%, #f97316, #ec4899 40%, #38bdf8 100%);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .hero-role {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .hero-tagline {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .mini-card {
+      border-radius: var(--radius-md);
+      padding: 0.7rem 0.8rem;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      font-size: 0.78rem;
+    }
+
+    .mini-label {
+      color: var(--text-muted);
+      font-size: 0.74rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    .chip {
+      padding: 0.14rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      font-size: 0.72rem;
+      color: var(--text-main);
+    }
+
+    /* Sections */
+    section {
+      margin-top: 1.8rem;
+      padding-top: 2.25rem;
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+    }
+
+    .section-badge {
+      font-size: 0.78rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.7);
+      color: #e0f2fe;
+    }
+
+    .section-lead {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      max-width: 40rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* About */
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 1.5rem;
+    }
+
+    .about-card,
+    .skills-card,
+    .exp-card,
+    .project-card,
+    .edu-card,
+    .contact-card {
+      border-radius: var(--radius-lg);
+      padding: 1.35rem 1.4rem;
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.99));
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .about-card p + p {
+      margin-top: 0.65rem;
+    }
+
+    .bullet-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.85rem;
+      font-size: 0.8rem;
+    }
+
+    .bullet-pill {
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.8);
+      color: var(--text-muted);
+    }
+
+    .meta-list {
+      list-style: none;
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    .meta-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    .meta-label {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-group {
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), rgba(15, 23, 42, 0.95));
+      border: 1px solid rgba(56, 189, 248, 0.35);
+    }
+
+    .skill-title {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+    }
+
+    .skill-badge {
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+    }
+
+    /* Experience */
+    .timeline {
+      display: grid;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .exp-card {
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .exp-card::before {
+      content: "";
+      position: absolute;
+      left: 0.5rem;
+      top: 1rem;
+      bottom: 1rem;
+      border-left: 1px solid rgba(75, 85, 99, 0.75);
+    }
+
+    .exp-dot {
+      position: absolute;
+      left: 0.3rem;
+      top: 1rem;
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-soft);
+    }
+
+    .exp-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.75rem;
+      align-items: baseline;
+      margin-bottom: 0.35rem;
+    }
+
+    .exp-role {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .exp-company {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .exp-time {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .exp-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .exp-pill {
+      font-size: 0.73rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      color: var(--text-muted);
+    }
+
+    .exp-points {
+      margin-left: 0.8rem;
+      margin-top: 0.4rem;
+      padding-left: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .exp-points li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .project-title {
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .project-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.45rem;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      font-size: 0.74rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .project-tech span {
+      padding: 0.18rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    .project-link {
+      font-size: 0.8rem;
+      color: var(--accent);
+    }
+
+    /* Education & certs */
+    .edu-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 0.7rem;
+      font-size: 0.85rem;
+    }
+
+    .edu-main {
+      font-weight: 500;
+    }
+
+    .edu-inst {
+      color: var(--text-muted);
+    }
+
+    .edu-time {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .cert-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0.4rem;
+      font-size: 0.83rem;
+      color: var(--text-muted);
+    }
+
+    .cert-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.3fr) minmax(0, 2fr);
+      gap: 1.2rem;
+    }
+
+    .contact-line {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.86rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+    }
+
+    .contact-link {
+      font-size: 0.86rem;
+      color: var(--accent);
+      word-break: break-all;
+    }
+
+    .contact-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    .contact-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+      font-size: 0.78rem;
+    }
+
+    .contact-tag {
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.6);
+      color: var(--text-muted);
+    }
+
+    footer {
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      padding: 1.25rem 1.25rem 2rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero,
+      .about-layout,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 1.8rem;
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      section {
+        padding-top: 1.8rem;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-inner {
+        flex-wrap: wrap;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .hero-card {
+        padding: 1.2rem 1.1rem;
+      }
+
+      .shell {
+        padding-inline: 1rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+<!-- Header / Nav -->
+<header>
+<div class="nav-inner">
+<div class="brand">
+<div aria-hidden="true" class="brand-logo"></div>
+<div>
+<div class="brand-text-main">Jesmine Chaudhuri</div>
+<div class="brand-text-sub">Data Scientist · Principal Engineer</div>
+</div>
+</div>
+<nav aria-label="Main navigation">
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<div class="nav-cta">
+<span class="pill">Open to Data / ML &amp; Technical Leadership roles</span>
+</div>
+</div>
+</header>
+<main class="shell">
+<!-- Hero -->
+<section aria-label="Intro">
+<div class="hero">
+<div>
+<div class="hero-kicker">PORTFOLIO</div>
+<h1 class="hero-title">
+              Data Scientist &amp;<br/>
+<span>Principal Engineer</span>
+</h1>
+<p class="hero-subtitle">
+              I’m <strong>Jesmine Chaudhuri</strong> – a backend engineer turned
+              Data Scientist with <strong>13+ years across product engineering and
+              technical leadership</strong> and ~2 years hands-on in ML, LLMs, and
+              data science.
+            </p>
+<div class="hero-highlight">
+<span class="hero-dot"></span>
+<span>End-to-end delivery: from APIs &amp; data pipelines to ML and GenAI in production.</span>
+</div>
+<div class="hero-meta">
+<span>Based in Bengaluru · India</span>
+<span>Python · FastAPI · SQL · AWS · Ruby on Rails</span>
+<span>LLMs · LangChain · GenAI</span>
+</div>
+<div class="hero-actions">
+<!-- Point these to your hosted PDFs -->
+<a class="btn btn-primary" href="Jesmine_Chaudhuri_Resume.pdf" rel="noreferrer" target="_blank">
+<span class="icon">⬇️</span>
+<span>Download Data Science Resume</span>
+</a>
+<a class="btn btn-ghost" href="https://www.linkedin.com/in/jesminec/" rel="noreferrer" target="_blank">
+<span class="icon">🔗</span>
+<span>View LinkedIn</span>
+</a>
+</div>
+</div>
+<div class="hero-right">
+<div class="hero-card">
+<div class="hero-top">
+<div aria-hidden="true" class="avatar"></div>
+<div>
+<div class="hero-role">Associate Technical Architect · Data Scientist</div>
+<div class="hero-tagline">
+                    Previously at Tavant, Encora, Cerner, WinWire &amp; more.
+                  </div>
+</div>
+</div>
+<div class="hero-grid">
+<div class="mini-card">
+<div class="mini-label">Snapshot</div>
+<div class="chip-row">
+<span class="chip">13+ yrs backend &amp; leadership</span>
+<span class="chip">2+ yrs Data Science / ML</span>
+<span class="chip">5+ yrs Healthcare &amp; BFSI</span>
+</div>
+</div>
+<div class="mini-card">
+<div class="mini-label">Core Stack</div>
+<div class="chip-row">
+<span class="chip">Python · Pandas · scikit-learn</span>
+<span class="chip">FastAPI · REST</span>
+<span class="chip">MySQL · PostgreSQL</span>
+<span class="chip">Ruby on Rails</span>
+<span class="chip">AWS</span>
+</div>
+</div>
+<div class="mini-card">
+<div class="mini-label">GenAI &amp; LLMs</div>
+<div class="chip-row">
+<span class="chip">OpenAI GPT</span>
+<span class="chip">LLaMA</span>
+<span class="chip">LangChain</span>
+<span class="chip">Summarization · Q&amp;A</span>
+</div>
+</div>
+<div class="mini-card">
+<div class="mini-label">Ways I Add Value</div>
+<div class="chip-row">
+<span class="chip">Design data pipelines</span>
+<span class="chip">Ship ML to prod</span>
+<span class="chip">Lead teams &amp; reviews</span>
+<span class="chip">Client-facing delivery</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About -->
+<section id="about">
+<div class="section-heading">
+<h2 class="section-title">About</h2>
+<span class="section-badge">Career Snapshot</span>
+</div>
+<div class="about-layout">
+<div class="about-card">
+<p>
+              I bridge <strong>backend engineering, data science, and team leadership</strong>.
+              Over 13+ years, I’ve helped ship production systems across
+              healthcare, BFSI, and SaaS – from <strong>Ruby on Rails platforms and
+              REST APIs</strong> to <strong>ML models and LLM-powered tools</strong>.
+            </p>
+<p>
+              Recently, I’ve focused on building ML workflows and integrating
+              <strong>LLMs (OpenAI, LLaMA)</strong> via <strong>LangChain</strong> for
+              summarization, question answering, code generation, and document
+              automation – while still owning the API layer and delivery quality.
+            </p>
+<p>
+              I’m currently returning from a planned <strong>career break
+              (Nov 2024 – Dec 2025)</strong> for a family medical emergency and I’m
+              now open to full-time roles in <strong>Data Science, ML Engineering,
+              and Technical Leadership</strong>.
+            </p>
+<div class="bullet-row">
+<span class="bullet-pill">Backend &amp; API design</span>
+<span class="bullet-pill">Data pipelines &amp; ML</span>
+<span class="bullet-pill">GenAI &amp; LLM integration</span>
+<span class="bullet-pill">Agile delivery &amp; mentoring</span>
+</div>
+</div>
+<div class="about-card">
+<ul class="meta-list">
+<li><span class="meta-label">Location:</span> Bengaluru, India (open to remote/hybrid)</li>
+<li><span class="meta-label">Experience:</span> 13+ years total; ~2 years Data Science / ML</li>
+<li><span class="meta-label">Domains:</span> Healthcare, BFSI, SaaS, Marketing Tech, E-commerce</li>
+<li><span class="meta-label">Looking for:</span> Data Scientist, ML Engineer, Tech Lead / Architect</li>
+<li><span class="meta-label">Languages:</span> Python, Ruby, SQL, JavaScript</li>
+<li><span class="meta-label">Ways of working:</span> Agile (1-week sprints), CI/CD, code reviews</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Skills -->
+<section id="skills">
+<div class="section-heading">
+<h2 class="section-title">Skills</h2>
+<span class="section-badge">Tech &amp; Delivery</span>
+</div>
+<p class="section-lead">
+          I’m comfortable taking ownership from data to deployment – designing the
+          architecture, building the APIs and models, and leading teams to ship
+          reliably.
+        </p>
+<div class="skills-grid">
+<div class="skill-group">
+<h3 class="skill-title">Data Science &amp; ML</h3>
+<div class="skill-list">
+<span class="skill-badge">Python (pandas, NumPy)</span>
+<span class="skill-badge">scikit-learn</span>
+<span class="skill-badge">TensorFlow</span>
+<span class="skill-badge">Regression &amp; Classification</span>
+<span class="skill-badge">EDA &amp; Feature Engineering</span>
+<span class="skill-badge">Clustering · PCA</span>
+<span class="skill-badge">Ensembles (RF, XGBoost, AdaBoost)</span>
+<span class="skill-badge">Churn &amp; Recommendation Systems</span>
+<span class="skill-badge">NLP &amp; CV (CNN, LSTM, GloVe)</span>
+</div>
+</div>
+<div class="skill-group">
+<h3 class="skill-title">GenAI &amp; LLMs</h3>
+<div class="skill-list">
+<span class="skill-badge">OpenAI GPT</span>
+<span class="skill-badge">LLaMA</span>
+<span class="skill-badge">LangChain</span>
+<span class="skill-badge">Summarization</span>
+<span class="skill-badge">Q&amp;A</span>
+<span class="skill-badge">Code Generation</span>
+<span class="skill-badge">Document Automation</span>
+</div>
+</div>
+<div class="skill-group">
+<h3 class="skill-title">Backend, APIs &amp; Cloud</h3>
+<div class="skill-list">
+<span class="skill-badge">FastAPI</span>
+<span class="skill-badge">RESTful APIs</span>
+<span class="skill-badge">Ruby on Rails</span>
+<span class="skill-badge">MySQL</span>
+<span class="skill-badge">PostgreSQL</span>
+<span class="skill-badge">AWS (EC2, RDS, S3, etc.)</span>
+<span class="skill-badge">Nginx</span>
+<span class="skill-badge">Sidekiq · RSpec</span>
+</div>
+</div>
+<div class="skill-group">
+<h3 class="skill-title">Leadership &amp; Delivery</h3>
+<div class="skill-list">
+<span class="skill-badge">Team Management &amp; Mentoring</span>
+<span class="skill-badge">Architecture &amp; Design Reviews</span>
+<span class="skill-badge">CI/CD &amp; DevOps collaboration</span>
+<span class="skill-badge">Client &amp; Stakeholder Management</span>
+<span class="skill-badge">Agile / Sprint Planning</span>
+<span class="skill-badge">Code Reviews &amp; Quality</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience -->
+<section id="experience">
+<div class="section-heading">
+<h2 class="section-title">Experience</h2>
+<span class="section-badge">Full Timeline</span>
+</div>
+<p class="section-lead">Complete professional history, including the career break and all roles.</p>
+<div class="timeline"><article class="exp-card"><div aria-hidden="true" class="exp-dot"></div><div class="exp-header"><div class="exp-role">Career Break (Personal)</div><div class="exp-company">Personal</div><div class="exp-time">Nov 2024 – Dec 2025</div></div><ul class="exp-points"><li>Family medical emergency break; now open to full‑time opportunities.</li></ul></article><article class="exp-card"><div aria-hidden="true" class="exp-dot"></div><div class="exp-header"><div class="exp-role">Associate Technical Architect</div><div class="exp-company">Tavant Technologies · Bengaluru</div><div class="exp-time">Dec 2022 – Oct 2024</div></div><ul class="exp-points"><li>Designed data pipelines and built ML models for production workflows.</li><li>Developed scalable APIs with FastAPI; owned integration and release quality.</li><li>Integrated LLMs (OpenAI/LLaMA) via LangChain for summarization, Q&amp;A, code generation, and document automation.</li></ul></article><article class="exp-card"><div aria-hidden="true" class="exp-dot"></div><div class="exp-header"><div class="exp-role">Technical Lead</div><div class="exp-company">Encora Innovation Lab · Bengaluru</div><div class="exp-time">Mar 2021 – Dec 2022</div></div><ul class="exp-points"><li>Owned backend design/reviews, CI, and delivery; partnered with clients; mentored developers.</li></ul></article><article class="exp-card"><div aria-hidden="true" class="exp-dot"></div><div class="exp-header"><div class="exp-role">Engineering Manager</div><div class="exp-company">Cerner Healthcare Solutions India Pvt. Ltd. · Bengaluru</div><div class="exp-time">Dec 2019 – Nov 2020</div></div><ul class="exp-points"><li>Drove delivery for patient portal initiatives; hands‑on backend, deployments, and U.S. stakeholder coordination.</li></ul></article><article class="exp-card"><div aria-hidden="true" class="exp-dot"></div><div class="exp-header"><div class="exp-role">Principal Engineer</div><div class="exp-company">WinWire Technologies · Bengaluru</div><div class="exp-time">Feb 2016 – Nov 2019</div></div><ul class="exp-points"><li>Led offline marketing campaigns module; CI/CD, testing strategy, 3rd‑party API integrations, and client reporting.</li></ul></article><article class="exp-card"><div aria-hidden="true" class="exp-dot"></div><div class="exp-header"><div class="exp-role">Senior Software Engineer</div><div class="exp-company">Idexcel</div><div class="exp-time">Feb 2015 – Feb 2016</div></div><ul class="exp-points"><li>Backend development, bug‑fixing, deployments, and task delegation.</li></ul></article><article class="exp-card"><div aria-hidden="true" class="exp-dot"></div><div class="exp-header"><div class="exp-role">Senior Software Engineer</div><div class="exp-company">Indusnet</div><div class="exp-time">Feb 2015 – Feb 2016</div></div><ul class="exp-points"><li>Backend development, bug‑fixing, deployments, and task delegation.</li></ul></article><article class="exp-card"><div aria-hidden="true" class="exp-dot"></div><div class="exp-header"><div class="exp-role">Senior Software Engineer</div><div class="exp-company">Prime Access</div><div class="exp-time">Jan 2014 – May 2014</div></div><ul class="exp-points"><li>Backend development, bug‑fixing, deployments, and task delegation.</li></ul></article><article class="exp-card"><div aria-hidden="true" class="exp-dot"></div><div class="exp-header"><div class="exp-role">Application Programmer</div><div class="exp-company">WebSpiders</div><div class="exp-time">Feb 2013 – Dec 2013</div></div><ul class="exp-points"><li>Backend engineering and maintenance across projects.</li></ul></article><article class="exp-card"><div aria-hidden="true" class="exp-dot"></div><div class="exp-header"><div class="exp-role">Software Developer</div><div class="exp-company">Circar Consulting</div><div class="exp-time">May 2011 – Jan 2013</div></div><ul class="exp-points"><li>Backend engineering and maintenance across projects.</li></ul></article></div>
+</section>
+<!-- Projects -->
+<section id="projects">
+<div class="section-heading">
+<h2 class="section-title">Projects</h2>
+<span class="section-badge">Industry &amp; Data Science</span>
+</div>
+<p class="section-lead">
+          A mix of <strong>industry projects</strong> and <strong>data science/ML case
+          studies</strong> demonstrating how I work with real-world data, users, and
+          production systems.
+        </p>
+<div class="projects-grid">
+<article class="project-card">
+<div class="project-tag">GenAI · Data &amp; Document Automation</div>
+<h3 class="project-title">Scribd – AI/ML &amp; LLM Integration</h3>
+<p class="project-meta">
+              Built data analysis workflows and GenAI features for document
+              summarization, Q&amp;A, and content automation.
+            </p>
+<div class="project-tech">
+<span>Python</span>
+<span>pandas · NumPy</span>
+<span>scikit-learn</span>
+<span>TensorFlow</span>
+<span>MySQL</span>
+<span>OpenAI GPT</span>
+<span>LLaMA</span>
+<span>LangChain</span>
+</div>
+<p class="project-meta">
+              Focused on turning unstructured documents into searchable,
+              summarized knowledge using LLMs and classical ML.
+            </p>
+</article>
+<article class="project-card">
+<div class="project-tag">Healthcare · Product Engineering</div>
+<h3 class="project-title">Clockwise MD (ExperityHealth)</h3>
+<p class="project-meta">
+              Healthcare appointment booking platform enabling smoother patient
+              scheduling and flow.
+            </p>
+<div class="project-tech">
+<span>Ruby 3</span>
+<span>Rails 6</span>
+<span>PostgreSQL</span>
+<span>Sidekiq</span>
+<span>RSpec</span>
+</div>
+<p class="project-meta">
+              Contributed to backend, performance, and reliability across a
+              high-traffic, patient-facing system.
+            </p>
+</article>
+<article class="project-card">
+<div class="project-tag">Healthcare · Patient Portal</div>
+<h3 class="project-title">HealtheIntent – Patient Engagement</h3>
+<p class="project-meta">
+              Patient portal covering immunizations, wellness campaigns,
+              enrollment tooling, and admin branding for health systems.
+            </p>
+<div class="project-tech">
+<span>Ruby on Rails</span>
+<span>ReactJS</span>
+<span>AWS</span>
+<span>MySQL</span>
+<span>Nginx</span>
+</div>
+<p class="project-meta">
+              Focus on backend modules, branding, and tooling that improved
+              patient engagement and clinician workflows.
+            </p>
+</article>
+<article class="project-card">
+<div class="project-tag">Real Estate · Predictive Analytics</div>
+<h3 class="project-title">SmartTargeting 5.0 – Lead Targeting</h3>
+<p class="project-meta">
+              Flagship product for SmartZip, identifying homeowners most likely
+              to sell/buy or refinance in specific neighborhoods.
+            </p>
+<div class="project-tech">
+<span>Ruby on Rails</span>
+<span>AWS</span>
+<span>MySQL</span>
+</div>
+<p class="project-meta">
+              Worked on backend services and integrations for a data-driven lead
+              targeting engine in the U.S. real estate market.
+            </p>
+</article>
+<article class="project-card">
+<div class="project-tag">Lending · Automation</div>
+<h3 class="project-title">Cync – Borrowing Base Automation</h3>
+<p class="project-meta">
+              Platform for lenders to automate Borrowing Base Certificate (BBC)
+              processing and reduce operational costs.
+            </p>
+<div class="project-tech">
+<span>Ruby on Rails</span>
+<span>MySQL</span>
+<span>Nginx</span>
+</div>
+<p class="project-meta">
+              Improved workflows that turned manual financial data workflows
+              into streamlined, automated processes.
+            </p>
+</article>
+<article class="project-card">
+<div class="project-tag">E‑commerce · Product Engineering</div>
+<h3 class="project-title">Tech‑nerd — E‑commerce for Tech Apparel</h3>
+<p class="project-meta">
+              E‑commerce platform for tech apparel with catalog, checkout flows, and operational tooling.
+            </p>
+<div class="project-tech">
+<span>Ruby on Rails</span>
+<span>MySQL</span>
+</div>
+<p class="project-meta">
+              Contributed to backend development, integrations, and stability improvements.
+            </p>
+</article>
+<article class="project-card">
+<div class="project-tag">SaaS · Collaboration</div>
+<h3 class="project-title">OurProjectTeam — Project Communication Platform</h3>
+<p class="project-meta">
+              Project‑communication tool enabling distributed teams to share updates, coordinate work, and report progress.
+            </p>
+<div class="project-tech">
+<span>Ruby on Rails</span>
+<span>MySQL</span>
+</div>
+<p class="project-meta">
+              Built and maintained backend modules; supported deployments and iterative enhancements.
+            </p>
+</article>
+<article class="project-card">
+<div class="project-tag">Data Science · Case Studies</div>
+<h3 class="project-title">Analytics &amp; ML Portfolio</h3>
+<p class="project-meta">
+              A set of hands-on projects covering applied statistics, clustering,
+              supervised learning, churn, recommendation, NLP, CV, and
+              sequential models.
+            </p>
+<div class="project-tech">
+<span>EDA &amp; Hypothesis Testing</span>
+<span>Clustering &amp; PCA</span>
+<span>Logistic Regression · SVM</span>
+<span>Random Forest · XGBoost</span>
+<span>Recommendation Systems</span>
+<span>CNN · LSTM · GloVe</span>
+</div>
+<p class="project-meta">
+              These projects showcase how I explore data, engineer features, tune
+              models, and translate findings into business insights.
+            </p>
+</article>
+</div>
+</section>
+<!-- Education -->
+<section id="education">
+<div class="section-heading">
+<h2 class="section-title">Education</h2>
+<span class="section-badge">Academic Background</span>
+</div>
+<p class="section-lead">
+          A foundation in <strong>computer applications and physics</strong>, extended
+          by a postgraduate program focused on <strong>AI &amp; ML</strong> and a
+          management degree in <strong>Information Systems</strong>.
+        </p>
+<div class="edu-card">
+<div class="edu-row">
+<div>
+<div class="edu-main">PGP in Artificial Intelligence &amp; Machine Learning</div>
+<div class="edu-inst">University of Texas at Austin · Great Lakes Business School</div>
+</div>
+<div class="edu-time">Jun 2022 – Sep 2023</div>
+</div>
+<div class="edu-row">
+<div>
+<div class="edu-main">MBA – Information Systems</div>
+<div class="edu-inst">Sikkim Manipal University</div>
+</div>
+<div class="edu-time">2016 – 2019</div>
+</div>
+<div class="edu-row">
+<div>
+<div class="edu-main">MCA – Master of Computer Applications</div>
+<div class="edu-inst">West Bengal University of Technology</div>
+</div>
+<div class="edu-time">2007 – 2010</div>
+</div>
+<div class="edu-row">
+<div>
+<div class="edu-main">B.Sc. in Physics</div>
+<div class="edu-inst">University of Calcutta</div>
+</div>
+<div class="edu-time">2004 – 2007</div>
+</div>
+<h3 class="skill-title" style="margin-top:1.1rem;">Certifications</h3>
+<ul class="cert-list">
+<li>DevOps training (2021–22)</li>
+<li>O‑level (2003–05)</li>
+</ul>
+</div>
+</section>
+<!-- Contact -->
+<section id="contact">
+<div class="section-heading">
+<h2 class="section-title">Contact</h2>
+<span class="section-badge">Let’s Talk</span>
+</div>
+<p class="section-lead">
+          I’m actively exploring opportunities in <strong>Data Science, ML
+          Engineering, and technical leadership</strong>. The best way to reach me is
+          via email or LinkedIn.
+        </p>
+<div class="contact-grid">
+<div class="contact-card">
+<div class="contact-line">
+<div class="contact-label">Email</div>
+<a class="contact-link" href="mailto:jesmine.ror@gmail.com">jesmine.ror@gmail.com</a>
+</div>
+<div class="contact-line">
+<div class="contact-label">Phone</div>
+<span>+91 96630 23409 · +91 90510 61960</span>
+</div>
+<div class="contact-line">
+<div class="contact-label">LinkedIn</div>
+<a class="contact-link" href="https://www.linkedin.com/in/jesminec/" rel="noreferrer" target="_blank">
+                linkedin.com/in/jesminec
+              </a>
+</div>
+<div class="contact-line">
+<div class="contact-label">Great Learning</div>
+<a class="contact-link" href="https://eportfolio.mygreatlearning.com/jesmine-chaudhuri" rel="noreferrer" target="_blank">
+                AI &amp; ML e-Portfolio
+              </a>
+</div>
+<div class="contact-line">
+<div class="contact-label">Great Learning</div>
+<a class="contact-link" href="https://eportfolio.mygreatlearning.com/jesmine-chaudhuri2" rel="noreferrer" target="_blank">
+                DataScience e-Portfolio
+              </a>
+</div>
+<p class="contact-note">
+              I’m happy to discuss roles, consulting engagements, or collaboration
+              on data/ML and GenAI projects.
+            </p>
+</div>
+<div class="contact-card">
+<h3 style="font-size:0.95rem;margin-bottom:0.5rem;">Ideal roles &amp; fit</h3>
+<p class="contact-note">
+              I work best where <strong>data, product, and engineering intersect</strong> –
+              helping teams:
+            </p>
+<ul class="exp-points" style="margin-left:0.2rem;margin-top:0.5rem;">
+<li>Shape problem statements and success metrics.</li>
+<li>Design data pipelines and model workflows that are production-ready.</li>
+<li>Integrate ML/LLM features into real user journeys.</li>
+<li>Maintain strong engineering standards and mentoring culture.</li>
+</ul>
+<div class="contact-tags">
+<span class="contact-tag">Data Scientist / ML Engineer</span>
+<span class="contact-tag">Tech Lead / Architect</span>
+<span class="contact-tag">Backend &amp; ML Hybrid</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+      © <span id="year"></span> Jesmine Chaudhuri · Built with HTML &amp; CSS.
+      · <a href="https://www.linkedin.com/in/jesminec/" rel="noreferrer" target="_blank">Connect on LinkedIn</a>
+</footer>
+</div>
+<script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
